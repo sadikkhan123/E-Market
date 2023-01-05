@@ -13,7 +13,7 @@ export default function App() {
 <Provider store={store}>
      <BrowserRouter>
      <Navbar/>
-     <ToastContainer/>
+     <ToastContainer autoClose={2000} />
      
       <Routes>
         <Route exact path="/" element={<Products/>}/>

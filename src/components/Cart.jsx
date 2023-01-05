@@ -82,7 +82,7 @@ dispatch(getTotals());
    </div>
  </td>
  <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
-   {cartItem.price}
+   {Math.ceil(cartItem.price)}
  </td>
  <td className="py-4 px-6">
    <button onClick={()=>handleRemoveFromCart(cartItem)}
@@ -93,7 +93,7 @@ dispatch(getTotals());
  </td>
  <td className='py-4 px-6 font-semibold text-gray-900 dark:text-white'>
    
-    <p>{cartItem.price*cartItem.cartQuantity}</p>
+    <p>{Math.ceil(cartItem.price)*cartItem.cartQuantity}</p>
   </td>
 
 </tr>
@@ -103,10 +103,10 @@ dispatch(getTotals());
     ))}
    
   </table>
-  <div className='flex w-full'>
-  <div className='px-10 justify-between w-full flex h-10'>
+  <div className='px-10 md:px-20 flex w-full'>
+  <div className='justify-between w-full flex h-10'>
     <span>Grand total</span>
-    <div>{cart.cartTotalAmount}</div>
+    <div className='flex items-center mx-20'>{Math.ceil(cart.cartTotalAmount)}</div>
    
     
    </div>
