@@ -4,7 +4,7 @@ const NotFound = () => {
   return (
   
     <>
-     <div className=' flex pt-56 items-center justify-center'>404 not found </div>
+     <div className=' h-screen flex pt-56 items-center justify-center'>404 not found </div>
       </>
   )
 }
